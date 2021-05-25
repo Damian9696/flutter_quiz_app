@@ -1,5 +1,8 @@
 # quiz_app
 
+You can track my progress on Trello
+https://trello.com/b/iGqEhW7k/flutter-quiz-app
+
 A new Flutter project.
 
 ## Getting Started
