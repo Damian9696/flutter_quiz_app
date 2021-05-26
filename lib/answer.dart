@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
 
-  final Function selectHandler;
+  final Function answerQuestion;
+  final String answer;
 
-  Answer(this.selectHandler);
+  Answer(this.answerQuestion, this.answer);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       child: ElevatedButton(
-        child: Text("Answer 1"),
-        onPressed: selectHandler,
+        child: Text(answer),
+        onPressed: answerQuestion,
       ),
     );
   }
