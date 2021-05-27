@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
-  var _questions = [
+  final _questions = const [
     {
       "question": "Date of initial release Flutter?",
       "answers": ["2015", "2016", "2017", "2018"]
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('My first app'),
         ),
-        body: Column(
+        body: _questionIndex < _questions.length ? Column(
           children: [
             Question(_questions[_questionIndex]["question"]),
             //The Spread operator ...
@@ -54,6 +54,8 @@ class _MyAppState extends State<MyApp> {
               return Answer(_answerQuestion, answer);
             }).toList()
           ],
+        ) : Center(
+          child: Text("You did it!"),
         ),
       ),
     );
